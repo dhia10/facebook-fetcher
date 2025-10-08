@@ -1,0 +1,41 @@
+name: Fetch Facebook → Sheet
+
+on:
+  schedule:
+    - cron: "*/3 * * * *"   # every 15 minutes
+  workflow_dispatch:         # manual run button in the Actions tab
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run worker
+        env:
+          FB_GRAPH_VER: v23.0
+          RECEIVER_URL: ${{ secrets.RECEIVER_URL }}
+          RECEIVER_SECRET: ${{ secrets.RECEIVER_SECRET }}
+          PAGES_JSON: ${{ secrets.PAGES_JSON }}
+
+          # knobs (you can adjust later)
+          POST_LIMIT: "4"
+          COMMENT_PAGES: "2"
+          CONV_PAGES: "1"
+          LIVE_LIMIT: "3"
+          LIVE_COMMENT_PAGES: "2"
+          DEDUP_WINDOW_S: "3600"
+          IGNORE_LIST: "36011012"
+
+        run: python worker.py
