@@ -1,11 +1,7 @@
-# 📡 Real-Time Social Stream Ingestion & Data Quality Pipeline
+# Ingestion de Flux d'Événements et Contrôle Qualité en Temps Réel
+### Architecture d'ingestion asynchrone, validation syntaxique, normalisation Unicode et déduplication temporelle
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)]()
-[![Automation](https://img.shields.io/badge/Automation-GitHub%20Actions%20Cron-purple.svg)]()
-[![Data%20Quality](https://img.shields.io/badge/Data%20Quality-Deduplication%20%26%20Validation-green.svg)]()
-[![Architecture](https://img.shields.io/badge/Architecture-Event--Driven%20Worker-orange.svg)]()
-
-> Pipeline d'ingestion automatisée en continu, parsing textuel, fiabilisation et transmission sécurisée de flux d'événements entrants vers des bases de données et feuilles de calcul partagées (APIs REST & Webhooks).
+> Pipeline d'ingestion automatisée en continu, parsing textuel, fiabilisation et transmission sécurisée de flux d'événements entrants vers des bases de données et feuilles de calcul partagées (APIs REST et Webhooks).
 
 ---
 
