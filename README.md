@@ -93,5 +93,5 @@ facebook-fetcher/
 ## 6. Auteur & Contexte
 
 - **Développeur :** Dhia Romdhane — Élève-Ingénieur Data Science & Analytics (ESPRIT)
-- **GitHub :** [github.com/dhia10](https://github.com/dhia10)
+- **GitHub :** [github.com/dhia10](https://github.com/dhia10) • **LinkedIn :** [linkedin.com/in/dhia-romdhane-ds](https://www.linkedin.com/in/dhia-romdhane-ds/)
 - **Contexte :** Projet d'automatisation de capture de leads et fiabilisation de flux de données clients.
